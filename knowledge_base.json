@@ -1,0 +1,62 @@
+{
+  "initial_problems": {
+    "1": "pc_wont_turn_on",
+    "2": "pc_is_slow"
+  },
+  "rules": [
+    {
+      "if": ["pc_wont_turn_on"],
+      "then": "ask_is_power_light_on"
+    },
+    {
+      "if": ["pc_wont_turn_on", "is_power_light_on_no"],
+      "then": "ask_is_plugged_in"
+    },
+    {
+      "if": ["pc_wont_turn_on", "is_power_light_on_no", "is_plugged_in_yes"],
+      "then": "suggestion_check_power_outlet"
+    },
+    {
+      "if": ["pc_wont_turn_on", "is_power_light_on_no", "is_plugged_in_no"],
+      "then": "suggestion_plug_in_power_cable"
+    },
+    {
+      "if": ["pc_wont_turn_on", "is_power_light_on_yes"],
+      "then": "ask_do_you_hear_fan"
+    },
+    {
+      "if": ["pc_wont_turn_on", "is_power_light_on_yes", "do_you_hear_fan_no"],
+      "then": "suggestion_possible_power_supply_failure"
+    },
+    {
+      "if": ["pc_wont_turn_on", "is_power_light_on_yes", "do_you_hear_fan_yes"],
+      "then": "suggestion_check_monitor_cable"
+    },
+    {
+      "if": ["pc_is_slow"],
+      "then": "ask_have_you_restarted"
+    },
+    {
+      "if": ["pc_is_slow", "have_you_restarted_no"],
+      "then": "suggestion_restart_the_pc"
+    },
+    {
+      "if": ["pc_is_slow", "have_you_restarted_yes"],
+      "then": "suggestion_check_task_manager_for_high_cpu_usage"
+    }
+  ],
+  "questions": {
+    "ask_is_power_light_on": "Is the power light on the PC lit up?",
+    "ask_is_plugged_in": "Is the PC firmly plugged into a wall outlet?",
+    "ask_do_you_hear_fan": "When you press the power button, do you hear any fans spinning?",
+    "ask_have_you_restarted": "Have you tried restarting the computer recently?"
+  },
+  "suggestions": {
+    "suggestion_plug_in_power_cable": "Please plug in the power cable to a wall outlet and try again.",
+    "suggestion_check_power_outlet": "The PC seems to be plugged in. Please try a different power outlet or check if the outlet is working.",
+    "suggestion_possible_power_supply_failure": "It's possible there is a power supply unit (PSU) failure.",
+    "suggestion_check_monitor_cable": "The PC seems to have power. Please check if the monitor cable is securely connected to both the PC and the monitor.",
+    "suggestion_restart_the_pc": "Often, a simple restart can solve performance issues. Please restart your PC.",
+    "suggestion_check_task_manager_for_high_cpu_usage": "Please open the Task Manager (Ctrl+Shift+Esc) and check for any applications using a high percentage of the CPU."
+  }
+}
