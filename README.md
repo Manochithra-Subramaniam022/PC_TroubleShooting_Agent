@@ -1,30 +1,55 @@
-# Connect 4 AI Player 🤖
+💻 PC Troubleshooting Agent
+🚀 Project Overview
 
-This is a Python implementation of the game Connect 4 with a graphical user interface (GUI) built using Pygame. The AI opponent uses the **Minimax algorithm with Alpha-Beta pruning** to make strategic decisions.
+PC Troubleshooting Agent is an intelligent assistant designed to diagnose and provide solutions for common computer-related issues. The system analyzes user-reported problems and suggests step-by-step troubleshooting guidance based on predefined logic and rule-based reasoning.
 
+The goal of this project is to simulate an automated IT support assistant that can help users resolve basic technical problems efficiently without requiring manual intervention.
 
+🧠 How It Works
+The PC Troubleshooting Agent:
 
-## Features
+Accepts user input describing a system issue
+Classifies the problem based on keywords or predefined categories
+Applies logical decision rules
+Suggests appropriate troubleshooting steps
+Guides the user through resolution
+The system mimics real-world helpdesk support workflows.
 
--   Playable Connect 4 game following standard rules.
--   Visual interface to see the board and make moves.
--   A challenging AI opponent that can look several moves ahead.
--   A randomized starting turn.
+🔍 Features
 
-## Setup
+Interactive problem diagnosis
+Rule-based decision logic
+Step-by-step solution suggestions
+Common issue handling (network, software, hardware basics)
+User-friendly interface
+Expandable troubleshooting database
 
-To run this project, you need to have Python 3 installed.
+🛠️ Technologies Used
 
-1.  Clone or download this repository to your local machine.
-2.  Navigate to the project directory in your terminal.
-3.  Install the required packages using the `requirements.txt` file:
-    ```bash
-    pip install -r requirements.txt
-    ```
+Python
+Conditional logic & rule-based system
 
-## How to Run
+🎯 Problem Categories Handled
 
-To start the game, simply run the `main.py` script from your terminal:
+Internet connectivity issues
+Slow system performance
+Software installation errors
+Application crashes
+Basic hardware troubleshooting
+System configuration problems
 
-```bash
-python main.py
+📌 Learning Outcomes
+Through this project:
+
+Implemented rule-based AI logic
+Designed decision-tree troubleshooting systems
+Improved problem classification skills
+Simulated real-world IT support automation
+Strengthened backend logic development
+
+🔮 Future Improvements
+
+Integrating NLP for smarter issue understanding
+Adding ML-based classification
+Expanding knowledge base
+Deploying as a web-based support assistant
